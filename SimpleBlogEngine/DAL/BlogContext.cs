@@ -11,11 +11,11 @@ namespace SimpleBlogEngine.DAL
         {
         }
 
-        public Microsoft.EntityFrameworkCore.DbSet<User> Users { get; set; }
-        public Microsoft.EntityFrameworkCore.DbSet<Post> Posts { get; set; }
-        public Microsoft.EntityFrameworkCore.DbSet<Category> Categories { get; set; }
-        public Microsoft.EntityFrameworkCore.DbSet<PostCategory> PostCategories { get; set; }
-        public Microsoft.EntityFrameworkCore.DbSet<PostAuthor> PostAuthors { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<PostCategory> PostCategories { get; set; }
+        public DbSet<PostAuthor> PostAuthors { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
