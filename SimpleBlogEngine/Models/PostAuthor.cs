@@ -5,12 +5,9 @@ using System.Threading.Tasks;
 
 namespace SimpleBlogEngine.Models
 {
-    public class Post
+    public class PostAuthor
     {
         public int PostID { get; set; }
-        public string Topic { get; set; }
-        public string Content { get; set; }
-        public DateTime Date { get; set; }
-
+        public int UserID { get; set; }
     }
 }
