@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SimpleBlogEngine.Models
 {
-    public class User
+    public class User : IEntity
     {
         
         public int UserID { get; private set; }

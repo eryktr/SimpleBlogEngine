@@ -5,9 +5,7 @@ using System.Threading.Tasks;
 
 namespace SimpleBlogEngine.Models
 {
-    public class Category : IEntity
+    public interface IEntity
     {
-        public int CategoryID { get; set; }
-        public string Name { get; set; }
     }
 }
