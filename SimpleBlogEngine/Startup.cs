@@ -18,7 +18,7 @@ namespace SimpleBlogEngine
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddScoped<IBlogRepository, BlogRepository>();
+            services.AddDbContext<BlogContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

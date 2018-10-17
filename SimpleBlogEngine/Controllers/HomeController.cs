@@ -10,18 +10,17 @@ namespace SimpleBlogEngine.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IBlogRepository _repository;
 
-        public HomeController(IBlogRepository br)
+        private readonly BlogContext _blogContext;
+
+        public HomeController(BlogContext blogContext)
         {
-            _repository = br;
+            _blogContext = blogContext;
         }
 
         public IActionResult Index()
         {
-            //var posts = _repository.ListAll<Post>() as IEnumerable<Post>;
-            //return View(posts);
-            return View();
+            return View(_blogContext.Posts.ToList());
         }
 
 
