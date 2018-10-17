@@ -7,9 +7,9 @@ using SimpleBlogEngine.Models;
 
 namespace SimpleBlogEngine.DAL
 {
-    interface IBlogRepository
+    public interface IBlogRepository
     {
-        IEnumerable<IEntity> ListAll(IEntity obj);
+        IEnumerable<IEntity> ListAll<T>() where T:IEntity;
         void Add(IEntity obj);
     }
 }

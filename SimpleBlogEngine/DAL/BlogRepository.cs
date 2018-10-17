@@ -15,23 +15,29 @@ namespace SimpleBlogEngine.DAL
             _context = context;
         }
 
-
-        public IEnumerable<IEntity> ListAll(IEntity obj)
+        public BlogRepository()
         {
-            switch (obj)
+            _context = new BlogContext();
+        }
+
+
+        public IEnumerable<IEntity> ListAll<T>() where T:IEntity
+        {
+            if (typeof(T) == typeof(Post))
             {
-                case Category c:
-                    return _context.Categories.ToList();
-
-                case Post p:
-                    return _context.Posts.ToList();
-
-                case User u:
-                    return _context.Posts.ToList();
-
-                default:
-                    return null;
-    
+                return _context.Posts.ToList();
+            }
+            else if (typeof(T) == typeof(Category))
+            {
+                return _context.Categories.ToList();
+            }
+            else if (typeof(T) == typeof(User))
+            {
+                return _context.Users.ToList();
+            }
+            else
+            {
+                return null;
             }
         }
 

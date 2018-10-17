@@ -1,9 +1,19 @@
-﻿@using Microsoft.AspNetCore.Identity.UI.Pages.Internal.Account.Manage
+﻿@model IEnumerable<SimpleBlogEngine.Models.Post>
+@using Microsoft.AspNetCore.Identity.UI.Pages.Internal.Account.Manage
 @using SimpleBlogEngine.DAL
+@using SimpleBlogEngine.Models
 @{
     ViewData["Title"] = "Index";
     Layout = "_Layout";
 
 }
 
-<h2>Latest news:</h2>
+<h2>Late
+    st news:</h2>
+
+@foreach (var post in Model)
+{
+    <h1> @post.Title </h1>
+    <h2>@post.Date</h2>
+    <p>@post.Content</p>
+}
