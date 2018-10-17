@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,7 +9,12 @@ namespace SimpleBlogEngine.Models
 {
     public class PostCategory
     {
-        public int PostID;
-        public int CategoryID;
+
+  
+        public int ID { get; set; }
+        public int PostID { get; set; }
+        public int CategoryID { get; set; }
+
+        
     }
 }

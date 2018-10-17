@@ -7,6 +7,8 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using SimpleBlogEngine.DAL;
+using SimpleBlogEngine.Models;
 
 namespace SimpleBlogEngine
 {
@@ -15,6 +17,7 @@ namespace SimpleBlogEngine
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
+            
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
