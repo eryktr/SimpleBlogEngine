@@ -9,13 +9,14 @@
 </head>
 <body>
 <h1>Simple Blog Engine</h1>
-    
+
 <span>
-    
+    <a  asp-controller="Home"asp-action="Index">Home</a>
+    <a asp-controller="Login" asp-action="Index">Log In</a>
 </span>
-   <hr/>
-    <div>
-        @RenderBody()
-    </div>
+<hr/>
+<div>
+    @RenderBody()
+</div>
 </body>
 </html>
