@@ -34,6 +34,7 @@ namespace SimpleBlogEngine.Controllers
             if (result.Any())
             {
                 HttpContext.Session.SetString("Username", username);
+                
                 HttpContext.Session.SetString("isAdmin", result.First().IsAdmin.ToString());
                 return new RedirectResult("/");
             }

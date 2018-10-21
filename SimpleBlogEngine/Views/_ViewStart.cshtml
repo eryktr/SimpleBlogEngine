@@ -3,7 +3,9 @@
 @using Microsoft.AspNetCore.Mvc;
 
 @{
-    Layout = string.IsNullOrEmpty(Html.ViewContext.HttpContext.Session.GetString("Username")) ? "_Layout" : "_LoggedLayout";
+    Layout = string.IsNullOrEmpty(Html.ViewContext.HttpContext.Session.GetString("Username")) 
+        ? "_Layout"
+        : Html.ViewContext.HttpContext.Session.GetString("isAdmin") == "True" ? "_LoggedAdminLayout" : "_LoggedLayout";
 }
 
 

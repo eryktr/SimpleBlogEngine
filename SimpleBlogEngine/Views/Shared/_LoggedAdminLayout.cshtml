@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["title"]</title>
+
+</head>
+<body>
+    <h1>Simple Blog Engine</h1>
+
+    <span>
+        <a asp-controller="Home" asp-action="Index">Home</a>
+        <a asp-controller="Login" asp-action="Logout">Log Out</a>
+        <a asp-controller="Home" asp-action="Index">Write Post</a>
+    </span>
+    <hr />
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
+
