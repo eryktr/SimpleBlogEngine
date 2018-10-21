@@ -19,6 +19,7 @@ namespace SimpleBlogEngine
         {
             services.AddMvc();
             services.AddDbContext<BlogContext>();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,9 +27,11 @@ namespace SimpleBlogEngine
         {
             if (env.IsDevelopment())
             {
+                app.UseSession();
                 app.UseDeveloperExceptionPage();
                 app.UseMvcWithDefaultRoute();
                 app.UseStaticFiles();
+                
             }
 
             app.Run(async (context) =>

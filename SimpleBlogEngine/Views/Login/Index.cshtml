@@ -5,9 +5,9 @@
 }
 
 <h2>Sing in:</h2>
-<form>
-    Username: <input type="text"/> <br/>
-    Password: <input type="password"/> <br />
-    <button type="submit">Log In</button>
+<form method="post">
+    Username: <input name="username" type="text"/> <br/>
+    Password: <input name="password" type="password"/> <br />
+    <button type="submit" asp-controller="Login" asp-action="Authorize">Log In</button>
 </form>
 

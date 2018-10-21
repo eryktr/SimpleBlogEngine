@@ -1,9 +1,9 @@
-﻿@using Microsoft.AspNetCore.Http;
+﻿@using System.Net
 @using Microsoft.AspNetCore.Http;
 @using Microsoft.AspNetCore.Mvc;
 
 @{
-    Layout = "_Layout";
+    Layout = string.IsNullOrEmpty(Html.ViewContext.HttpContext.Session.GetString("Username")) ? "_Layout" : "_LoggedLayout";
 }
 
 
