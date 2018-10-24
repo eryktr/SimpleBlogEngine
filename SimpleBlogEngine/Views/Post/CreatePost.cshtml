@@ -1,0 +1,15 @@
+﻿@model Post
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CreatePost</title>
+</head>
+<body>
+<form method="post">
+    Title: <input type="text" asp-for="Title"/> <br/>
+    Text: <textarea rows="10" columns="70" asp-for="Content"></textarea> <br/>
+    <button asp-controller="Post" asp-action="CreatePost">Add</button>
+</form>
+</body>
+</html>

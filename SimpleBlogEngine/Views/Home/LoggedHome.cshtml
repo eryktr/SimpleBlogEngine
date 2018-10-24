@@ -1,8 +1,19 @@
-﻿
+﻿@model IEnumerable<SimpleBlogEngine.Models.Post>
+
+
 @{
-    ViewData["Title"] = "LoggedHome";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Index";
+
+
 }
 
-<h2>LoggedHome</h2>
+<h2>Latest news:</h2>
 
+
+@foreach (var post in Model)
+{
+    <h1> @post.Title </h1>
+    <h2>@post.Date</h2>
+    <p>@post.Content</p>
+    <a asp-controller="Post" asp-action="Remove" asp-route-id="@post.PostID">Delete</a>
+}

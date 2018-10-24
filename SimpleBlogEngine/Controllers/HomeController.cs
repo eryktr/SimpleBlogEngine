@@ -20,7 +20,7 @@ namespace SimpleBlogEngine.Controllers
 
         public IActionResult Index()
         {
-            return View(_blogContext.Posts.ToList());
+            return HttpContext.Session.GetString("isAdmin") == "True" ? View("LoggedHome", _blogContext.Posts.ToList()) : View(_blogContext.Posts.ToList());
         }
     }
 }
